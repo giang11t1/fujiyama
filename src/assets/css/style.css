@@ -2506,7 +2506,14 @@ header .owl-controls {
   top: 0;
   left: 0;
 }
-.header a {
+.header-mobile nav {
+  display: none;
+}
+.header-mobile .header .mmenu:before,
+.header-mobile .header .mmenu:after {
+  content: none;
+}
+.header-mobile.header-category .header a.mmenu {
   display: block;
   width: 50px;
   height: 18px;
@@ -2515,14 +2522,14 @@ header .owl-controls {
   top: 15px;
   left: 10px;
 }
-.header a:before,
-.header a:after {
+.header-mobile.header-category .header a.mmenu:before,
+.header-mobile.header-category .header a.mmenu:after {
   content: '';
   display: block;
   background: #fff;
   height: 2px;
 }
-.header a span {
+.header-mobile.header-category .header a.mmenu span {
   background: #fff;
   display: block;
   height: 2px;
@@ -2605,7 +2612,7 @@ footer .note {
   top: -15px;
 }
 footer .btn-border .percent {
-  color: #b7b7b7;
+  color: #ea0a16;
   font-family: 'fontbold';
   font-size: 24px;
   display: inline-block;
@@ -2632,6 +2639,13 @@ footer .connect-mymall .youtube .text {
   color: #ea0a16;
   margin-top: 5px;
 }
+footer .thienhoa a span {
+  color: #011ece;
+  font-weight: bold;
+}
+footer .thienhoa a:hover {
+  text-decoration: underline;
+}
 footer .bct {
   display: inline-block;
 }
@@ -2639,7 +2653,7 @@ footer .bct .col-md-6 {
   padding-left: 0;
 }
 .red {
-  color: #b7b7b7;
+  color: #ea0a16;
 }
 /* footer====== */
 footer {
@@ -2715,7 +2729,7 @@ footer ul li a:visited {
 footer ul li a:hover,
 footer ul li a:focus,
 footer ul li a:active {
-  color: #2bc5f8;
+  color: #ea0a16;
   text-decoration: none;
   font-weight: bold;
 }
@@ -2737,7 +2751,7 @@ footer p.telephone {
   margin-bottom: 2px;
 }
 footer p.telephone a {
-  color: #b7b7b7;
+  color: #ea0a16;
   font-size: 26px;
   font-family: "fontbold";
 }
@@ -3798,6 +3812,14 @@ img {
 .width-reset-col-md-10 {
   width: 930px;
 }
+.menu-slick-style1 {
+  z-index: 99999;
+  width: 100%;
+  top: 0;
+  left: 0;
+  /* max-height: 145px; */
+  overflow: hidden;
+}
 /* end process bar */
 @media (max-width: 1024px) {
   .block-icons .list-icons li:first-child,
@@ -4301,6 +4323,22 @@ img {
   .form-ship {
     width: 75%;
   }
+  .menu-slick .nav-tabs {
+    width: 100% !important;
+  }
+  .menu-slick .nav-tabs li {
+    width: 33.4%;
+  }
+  .menu-slick .nav-tabs li a {
+    width: 100% !important;
+    padding: 12px 0;
+  }
+  header .slider {
+    width: 92% !important;
+  }
+  .hotline {
+    margin: 12px 0 17px;
+  }
 }
 @media (min-width: 992px) {
   .main .flag-col {
@@ -4317,10 +4355,10 @@ img {
 @media (max-width: 991px) {
   header,
   .sidebar {
-    display: none;
+    display: block;
   }
   .header {
-    display: block;
+    display: none;
   }
   .header img {
     margin-top: 15px;
@@ -4348,8 +4386,8 @@ img {
   .header-search {
     width: 70%;
   }
-  .input-group-btn {
-    display: none;
+  .hotline p .telephone {
+    font-size: 22px;
   }
   .main .owl-carousel .item {
     width: 88%;
@@ -4394,36 +4432,16 @@ img {
   .form-ship {
     width: 100%;
   }
+  header .slider .item {
+    margin-right: 80px;
+  }
+  header .slider {
+    width: 90% !important;
+  }
 }
 @media (max-width: 767px) {
-  .main .banner-middle .inner {
-    margin-left: 107px;
-    width: 75%;
-  }
-  .main .banner-middle2 .inner img {
-    margin-top: 75px;
-  }
-  .main .flag-col .inner .name-col h3 {
-    font-size: 28px;
-  }
-  .main .flag-col .inner a.link {
-    color: #fff;
-    padding: 5px 20px;
-    margin-top: 40px;
-    font-size: 16px;
-  }
-  .main .wrap-img .top-choice {
-    width: 30%;
-  }
-  .main .flag-col .inner {
-    text-align: center;
-  }
-  .retailers .banner .text-inner h3,
-  .retailers-detail .banner .text-inner h3 {
-    font-size: 42px;
-  }
-  .form-ship {
-    width: 65%;
+  .hotline {
+    margin: 25px 0 17px;
   }
 }
 @media (max-width: 580px) {
@@ -4461,178 +4479,22 @@ img {
     position: relative;
     top: -6px;
   }
-  .swiper-wrapper .text-inner {
-    padding-left: 50px;
+  header .slider .item {
+    margin-right: 55px;
   }
-  .block .col-xs-5,
-  .block .col-xs-7 {
-    width: 100%;
+  header .slider {
+    width: 80% !important;
   }
-  .main .top-best:after {
-    border-top-color: #219a45;
-    border-left-color: transparent;
+  .menu-slick .nav-tabs li {
+    width: 62.4%;
   }
-  .main .trader:after {
-    border-top-color: #252f3f;
-    border-left-color: transparent;
+  .swiper-wrapper .swiper-slide {
+    height: 300px;
+    background: url(../images/banner.png);
+    background-size: cover;
   }
-  .main .trader1:after {
-    border-top-color: #7dcc00;
-    border-left-color: transparent;
-  }
-  .main .trader2:after {
-    border-top-color: #00804e;
-    border-left-color: transparent;
-  }
-  .main .trader3:after {
-    border-top-color: #ffa52d;
-    border-left-color: transparent;
-  }
-  .main .trader4:after {
-    border-top-color: #de6312;
-    border-left-color: transparent;
-  }
-  .main .trader5:after {
-    border-top-color: #0071b0;
-    border-left-color: transparent;
-  }
-  .main .trader6:after {
-    border-top-color: #2f408d;
-    border-left-color: transparent;
-  }
-  .main .roaster:after {
-    border-top-color: #f7941d;
-    border-left-color: transparent;
-  }
-  .main .retailers:after {
-    border-top-color: #141a23;
-    border-left-color: transparent;
-  }
-  .main .country1:after {
-    border-top-color: #ed3040;
-    border-left-color: transparent;
-  }
-  .main .country2:after {
-    border-top-color: #3b9b4b;
-    border-left-color: transparent;
-  }
-  .main .country3:after {
-    border-top-color: #fff;
-    border-left-color: transparent;
-  }
-  .main .country4:after {
-    border-top-color: #1d2495;
-    border-left-color: transparent;
-  }
-  .main .flag-col:after {
-    left: 45%;
-    top: inherit;
-    bottom: -30px;
-  }
-  .main .flag-col:before {
-    left: 45%;
-    top: inherit;
-    bottom: -30px;
-    border-width: 21px;
-    margin-top: -21px;
-    border-color: rgba(255, 255, 255, 0);
-    border-top-color: #bdbdbd;
-    border-left-color: transparent;
-  }
-  .main .flag-col {
-    margin-bottom: 25px;
-    background-size: 100% 100%;
-  }
-  .main .banner-middle .inner {
-    width: 100%;
-    padding: 0 20px;
-  }
-  .main .banner-middle .inner h3.title {
-    font-size: 23px;
-    margin-top: 112px;
-  }
-  .owl-carousel .owl-item .item {
-    width: 100%;
-  }
-  .block .col-xs-5,
-  .block .col-xs-7,
-  .block .col-md-6 {
-    padding: 0 15px;
-  }
-  .btn-secondary {
-    padding: 0 50px;
-    font-size: 16px;
-    margin: 0 auto;
-  }
-  .main .flag-col {
-    text-align: center;
-  }
-  .main .banner-middle2 .inner img {
-    margin-top: 101px;
-    width: 30%;
-  }
-  .main .banner-middle2 .inner h3.title {
-    margin-left: 115px;
-  }
-  .main .flag-col .inner .name-col h3 {
-    font-size: 36px;
-  }
-  .main .flag-col .inner a.link {
-    padding: 5px 40px;
-    font-size: 20px;
-  }
-  .main .flag-col .inner .name-col h3 {
-    font-size: 34px;
-  }
-  .main .block-detail .wrap-img {
-    width: 100%;
-  }
-  .btn-primary {
-    margin: 0 auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-  .main .flag-col .inner1 .name-country {
-    font-size: 45px;
-  }
-  .main .flag-col .inner1 {
-    text-align: left;
-  }
-  .banner-farmer .swiper-wrapper .text-inner .text h3 {
-    font-size: 25px;
-  }
-  .banner-farmer .swiper-wrapper .text-inner .text h4 {
-    font-size: 20px;
-  }
-  .banner-farmer .swiper-wrapper .text-inner .text h2.main {
-    font-size: 45px;
-  }
-  .retailers .swiper-wrapper .text-inner,
-  .retailers-detail .swiper-wrapper .text-inner {
-    text-align: center;
-  }
-  .retailers .swiper-wrapper .text-inner h3,
-  .retailers-detail .swiper-wrapper .text-inner h3 {
-    font-size: 23px;
-  }
-  .retailers .text-inner img,
-  .retailers-detail .text-inner img,
-  .retailers .banner .text-inner img,
-  .retailers-detail .banner .text-inner img {
-    margin: 0;
-  }
-  .form-ship {
-    width: 100%;
-  }
-  .main .roaster1:after,
-  .main .roaster2:after,
-  .main .roaster3:after,
-  .main .roaster4:after {
-    bottom: -18px;
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
+  .hotline {
+    margin: 12px 0 17px;
   }
 }
 @media (max-width: 375px) {

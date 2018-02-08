@@ -31,9 +31,9 @@
 	<![endif]-->
 </head>
 <body class="{% block bodyclass%}{% endblock %}">
-	<div id="page">
+	<div id="page" class="header-mobile {% if current_page == 'category' %}header-category{% endif %}">
 		<div class="header">
-	        <a href="#menu"><span></span></a>
+	        <a class="mmenu" href="#menu"><span></span></a>
 	        <img class="" src="assets/images/logo.png" alt="">
 	        <div class="cart pull-right">
 	            Your cart
@@ -72,7 +72,7 @@
 	    </div>   
 	    </div>	
 	     
-	    <nav id="menu">
+	    <nav id="{% if current_page == 'category' %}menu{% endif %}">
 	        <ul>
 	        	<li><h2>Gia Dụng</h2></li>
 	            <li>

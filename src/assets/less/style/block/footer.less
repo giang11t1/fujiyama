@@ -46,7 +46,7 @@ footer {
     }
     .btn-border {
         .percent {
-            color: @secondary-color;
+            color: @primary-color;
             font-family: 'fontbold';
             font-size: 24px;
             display: inline-block;
@@ -79,6 +79,17 @@ footer {
             }
         }
     }
+    .thienhoa {
+        a {
+            span {
+                color: #011ece;
+                font-weight: bold;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
     .bct {
         display: inline-block;
         .col-md-6 {
@@ -87,7 +98,7 @@ footer {
     }
 }
 .red {
-    color: @secondary-color;
+    color: @primary-color;
 }
 
 /* footer====== */
@@ -177,7 +188,7 @@ footer ul li a:visited {
 footer ul li a:hover,
 footer ul li a:focus,
 footer ul li a:active {
-    color: #2bc5f8;
+    color: @primary-color;
     text-decoration: none;
     font-weight: bold;
 }
@@ -204,7 +215,7 @@ footer p.telephone {
 }
 
 footer p.telephone a {
-    color: @secondary-color;
+    color: @primary-color;
     font-size: 26px;
     font-family: "fontbold";
 }

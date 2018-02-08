@@ -1,3 +1,4 @@
+{% set current_page = 'index' %}
 {% extends "layout/_layout.html" %} {% block page-container %}
 <main>
     <div class="banner">
@@ -15,7 +16,7 @@
             <div class="swiper-pagination"></div>
         </div>
     </div>
-    <div class="menu-slick">
+    <div class="menu-slick menu-slick-style1" style="cursor: all-scroll;">
         <ul class="nav nav-tabs slider " role="tablist">
             <li role="presentation" class="cls-tab-promotion active"><a href="javascript:void(0);" class="home tablinks" title="" aria-controls="home" role="tab" onclick="openCity(event, 'tab1')"><span>Sản phẩm mới</span></a></li>
             <li role="presentation" class="cls-tab-promotion "><a href="javascript:void(0);" class="camera tablinks" title="" role="tab" onclick="openCity(event, 'tab2')"><span>Sản phẩm nổi bật</span></a></li>

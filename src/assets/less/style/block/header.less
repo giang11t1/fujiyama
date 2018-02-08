@@ -123,8 +123,20 @@ header {
     top: 0;
     left: 0;
 }
-
-.header a {
+.header-mobile  {
+    nav {
+        display: none;
+    }
+    .header {
+        .mmenu {
+            &:before,
+            &:after {
+                content: none;
+            }
+        }  
+    }    
+}
+.header-mobile.header-category .header a.mmenu {
     display: block;
     width: 50px;
     height: 18px;
@@ -134,15 +146,15 @@ header {
     left: 10px;
 }
 
-.header a:before,
-.header a:after {
+.header-mobile.header-category .header a.mmenu:before,
+.header-mobile.header-category .header a.mmenu:after {
     content: '';
     display: block;
     background: #fff;
     height: 2px;
 }
 
-.header a span {
+.header-mobile.header-category .header a.mmenu span {
     background: #fff;
     display: block;
     height: 2px;

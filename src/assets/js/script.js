@@ -105,4 +105,6 @@ $(document).ready(function() {
     $(function() {
         $('nav#menu').mmenu();
     });
+
+    $('.menu-slick').dragOn();
 });
