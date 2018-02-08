@@ -1,0 +1,122 @@
+/*
+ * Component: Form
+ * ---------------
+ */
+.form-control {
+    height: 40px;
+    padding: 6px 8px;
+    .border-radius(@input-radius);
+    box-shadow: none;
+    border-color: @line-color-1;
+    &:focus {
+    box-shadow: none;
+    }
+    &:not(select) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    }
+}
+
+.important {
+    color: @primary-color;
+}
+.checkbox input[type=checkbox] {
+    display: none;
+}
+.checkbox label:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid #e1e1e1;
+}
+.checkbox input[type=checkbox]:checked + label:before {
+    content: "\2713";
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    line-height: 15px;
+    background-color: @primary-color;
+    border: 1px solid @primary-color;
+}
+.checkbox input[type=checkbox]:checked + label {
+    color: @primary-color;
+    span {
+        color: @primary-color;
+    }
+}
+.checkbox {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.checkbox input[type=checkbox] {
+    display: none;
+}
+
+.checkbox label {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 25px;
+    font-size: 13px;
+    min-height: initial;
+    color: #464646;
+    font-size: 14px;
+}
+
+.checkbox label:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid #e1e1e1;
+}
+
+.checkbox label .number {
+    display: inline-block;
+    padding-left: 10px;
+    font-family: "fontlight";
+}
+
+input[type='radio'] {
+    -webkit-appearance: none;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid #595959;
+    margin-top: 0;
+    margin-right: 5px;
+    &:before {
+        content: '';
+        display: block;
+        width: 55%;
+        height: 55%;
+        margin: 2px 0px 2px 2px;
+        border-radius: 50%;
+    }
+    &:focus {
+        outline: none;
+    }
+    &:checked {
+        outline: none;
+        border: 1px solid @primary-color;
+        &:before {
+            background: @primary-color;
+        }
+    }
+}
