@@ -96,8 +96,13 @@ header {
     }
 }
 // mennu mobile
+
 .header {
     text-align: center;
+    .slider {
+        width: 1080px !important;
+        float: left;
+    }
 }
 
 .header {
@@ -151,11 +156,16 @@ header {
             a {
                 color: #fff;
                 text-transform: uppercase;
+                float: left;
             }
         }
     }
 }
-
+.mm-listitem {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
 .mm-listitem .mm-btn_fullwidth+a,
 .mm-listitem .mm-btn_fullwidth+span {
     color: #fff;
@@ -170,4 +180,7 @@ header {
 .mm-navbar__title {
     text-transform: uppercase;
     font-weight: bold;
+}
+.badge {
+    float: right;
 }

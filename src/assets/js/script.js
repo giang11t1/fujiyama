@@ -63,6 +63,18 @@ $(document).ready(function() {
         itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
         afterAction: myfunction
     });
+
+    var owl1 = $("#owl-demo1");
+    owl1.owlCarousel({
+        items: 7, //10 items above 1000px browser width
+        autoWidth: true,
+        itemsDesktop: [1000, 5], //5 items between 1000px and 901px
+        itemsDesktopSmall: [900, 3], // betweem 900px and 601px
+        itemsTablet: [600, 2], //2 items between 600 and 0
+        itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
+        afterAction: myfunction
+    });
+
     $(".next").click(function() {
         owl.trigger('owl.next');
         $(".next-pre .prev").css("display", "inline-block ");

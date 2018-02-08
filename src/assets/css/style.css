@@ -2485,6 +2485,10 @@ header .owl-controls {
 .header {
   text-align: center;
 }
+.header .slider {
+  width: 1080px !important;
+  float: left;
+}
 .header {
   background: #252f3f;
   font-size: 16px;
@@ -2530,6 +2534,12 @@ header .owl-controls {
 .mm-menu .mm-listview li a {
   color: #fff;
   text-transform: uppercase;
+  float: left;
+}
+.mm-listitem {
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
 .mm-listitem .mm-btn_fullwidth + a,
 .mm-listitem .mm-btn_fullwidth + span {
@@ -2543,6 +2553,9 @@ header .owl-controls {
 .mm-navbar__title {
   text-transform: uppercase;
   font-weight: bold;
+}
+.badge {
+  float: right;
 }
 footer ul {
   padding-left: 0;
@@ -4173,9 +4186,6 @@ img {
   }
 }
 @media (min-width: 1400px) {
-  .container {
-    width: 1500px;
-  }
   .header-search {
     width: 53%;
     margin: 0 auto;
@@ -4188,9 +4198,6 @@ img {
   }
 }
 @media (max-width: 1399px) {
-  .container {
-    width: 100%;
-  }
   header .topnav {
     padding: 0 30px 0 0px;
   }
@@ -4308,11 +4315,8 @@ img {
   }
 }
 @media (max-width: 991px) {
-  .container,
-  footer .container {
-    width: 100%;
-  }
-  header {
+  header,
+  .sidebar {
     display: none;
   }
   .header {
@@ -4320,6 +4324,9 @@ img {
   }
   .header img {
     margin-top: 15px;
+  }
+  .width-reset-col-md-10 {
+    width: 100%;
   }
   .header a {
     top: 30px;
