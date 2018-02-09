@@ -16,7 +16,7 @@
             <div class="col-md-10 col-xs-12 width-reset-col-md-10 main-content-right">
                 <div class="clearfix">
                     <p>Hiển thị sản phẩm theo: </p>
-                    <ul class="list-radio">
+                    <ul class="list-radio hidden-xs">
                         <li>
                             <input type="radio" name="display" value="từ thấp đến cao" checked id="radio1"> <label for="radio1">Từ thấp đến cao</label>
                         </li>
@@ -27,11 +27,17 @@
                             <input type="radio" name="display" value="có quà tặng - khuyến mãi" id="radio3"> <label for="radio3">Có quà tặng - Khuyến mãi</label>
                         </li>
                     </ul>
+                    <select class="hidden-md hidden-sm hidden-lg form-control" id="wap-category-sort">
+                        <option value="">Chọn loại sắp xếp</option>
+                        <option value="asc">Từ thấp đến cao</option>
+                        <option value="desc">Từ cao đến thấp</option>
+                        <option value="is_gift">Có quà tặng - Khuyến mãi</option>
+                    </select>
                 </div>
                 <div class="block-buy block-devices">
                     <div class="row">
                         {% for x in [1,2,3,4,5,6,7,8,9,10,11,12] %}
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-md-4 col-xs-6">
                             <div class="box">
                                 <div class="sale">
                                     <span class="number">31</span>

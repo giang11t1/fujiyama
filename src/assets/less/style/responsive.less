@@ -97,34 +97,7 @@
 	.header-search {
 	    width: 32%;
 	}
-	header .cart {
-	    width: 11%;
-	}
-	header .wrap-menu .top-menu .menu {
-	    width: 57%;
-	}
-	.star {
-	    margin-bottom: 20px;
-	}
-	.main .banner-middle .inner h3.title {
-	    margin-top: 105px;
-	}
-	.main .banner-middle .inner {
-	    margin-left: 100px;
-	    width: 42%;
-	}
-	.main .banner-middle2 .inner .btn-secondary {
-	    margin-top: 60px;
-	}
-	.main .flag-col .inner .name-col h3 {
-	    font-size: 30px;
-	}
-	.main .flag-col .inner1 .name-country {
-	    font-size: 32px;
-	}
-	.form-ship {
-	    width: 75%;
-	}
+	
 	.menu-slick .nav-tabs {
 	    width: 100% !important;
 	    li {
@@ -140,6 +113,17 @@
 	}
 	.hotline {
 	    margin: 12px 0 17px;
+	}
+	.sidebar .content-sidebar,
+	.sidebar .content-sidebar.affix .box-check {
+	    width: 195px;
+	}
+	.width-reset-col-md-2,
+	.sidebar .content-sidebar.affix {
+	    width: 210px;
+	}
+	.width-reset-col-md-10 {
+	    width: 755px;
 	}
 }
 @media (min-width: 992px) {
@@ -158,12 +142,12 @@
 @media (max-width: 991px) {
 	header,
 	.sidebar {
-		display: block;
+		display: none;
 	}
 	.header {
-		display: none;
+		display: block;
 		img {
-	    	margin-top: 15px;
+	    	margin-top: 6px;
 	    }
 	}
 	.width-reset-col-md-10 {
@@ -242,12 +226,33 @@
 	header .slider {
 	    width: 90% !important;
 	}
+	.header .slider {
+	    width: 90% !important;
+	}
+	.header .slider .item {
+		margin-right: 80px;
+	}
+	.breadcrumb {
+	    margin-top: 57px;
+	}
 }
-
 @media (max-width: 767px) {
 	.hotline {
 	    margin: 25px 0 17px;
 	}
+	.pagination {
+    	.wrap{
+    		.left div, .right div, .display {
+	    		display: none;
+	    	}
+    	}    	
+    }
+    .wrap-pagi {
+		text-align: center;
+		.page {
+		    width: 100%;
+		}
+    }
 }
 @media (max-width: 580px) {
 	.main .flag-col .inner a.link {
@@ -302,8 +307,12 @@
 	.hotline {
 	    margin: 12px 0 17px;
 	}
+	footer .col-xs-6,
+	.block-buy .col-xs-6 {
+        width: 100%;
+        padding: 0 30px;
+    }    
 }
-
 @media (max-width: 375px) {
 	.main .banner-middle .inner h3.title {
 	    font-size: 18px;
